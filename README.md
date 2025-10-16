@@ -41,19 +41,7 @@ Website ini dikembangkan menggunakan teknologi front-end modern berikut:
 
 ## Struktur Folder
 
-Project-UTS---Mail-Store/
-│
-├── index.html
-├── about.html
-├── products.html
-├── product-detail.html
-├── contact.html
-├── login.html
-├── checkout.html
-├── README.md
-├── package.json
-├── script.js
-└── style.css
+Project-UTS---Mail-Store/index.html, about.html, products.html, product-detail.html, contact.html, login.html, checkout.html, README.md, package.json, script.js, style.css
 
 ## Dokumentasi Proyek
 
