@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
+      type="image/png"
+    />
+    <title>Products - Mail Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fas fa-store me-2"></i>Mail Store
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge bg-primary" id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="fas fa-user"></i> Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Products Header -->
+    <section class="products-header py-5 mt-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 fw-bold mb-3">Koleksi Produk</h1>
+            <p class="lead">
+              Temukan berbagai produk berkualitas dengan harga terbaik
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="search-box">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Cari produk..."
+                  id="searchInput"
+                />
+                <button class="btn btn-primary" type="button" id="searchBtn">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filters py-4 bg-dark-subtle">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="d-flex flex-wrap gap-2">
+              <button
+                class="btn btn-outline-primary filter-btn active"
+                data-category="all"
+              >
+                Semua Kategori
+              </button>
+              <button
+                class="btn btn-outline-primary filter-btn"
+                data-category="electronics"
+              >
+                Elektronik
+              </button>
+              <button
+                class="btn btn-outline-primary filter-btn"
+                data-category="fashion"
+              >
+                Fashion
+              </button>
+              <button
+                class="btn btn-outline-primary filter-btn"
+                data-category="home"
+              >
+                Rumah & Taman
+              </button>
+              <button
+                class="btn btn-outline-primary filter-btn"
+                data-category="sports"
+              >
+                Olahraga
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="d-flex gap-2">
+              <select class="form-select" id="sortSelect">
+                <option value="name">Urutkan: Nama A-Z</option>
+                <option value="price-low">Harga: Rendah ke Tinggi</option>
+                <option value="price-high">Harga: Tinggi ke Rendah</option>
+                <option value="rating">Rating Tertinggi</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section class="products-grid py-5">
+      <div class="container">
+        <div class="row g-4" id="productsContainer">
+          <!-- Products will be loaded by JavaScript -->
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="text-center py-5" id="loadingSpinner">
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2">Memuat produk...</p>
+        </div>
+
+        <!-- No Products Found -->
+        <div class="text-center py-5 d-none" id="noProducts">
+          <i class="fas fa-search fa-3x text-muted mb-3"></i>
+          <h4>Produk tidak ditemukan</h4>
+          <p class="text-muted">
+            Coba ubah kata kunci pencarian atau filter kategori
+          </p>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-5">
+          <button class="btn btn-outline-primary btn-lg" id="loadMoreBtn">
+            <i class="fas fa-plus me-2"></i>Muat Lebih Banyak
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">
+              <i class="fas fa-shopping-cart me-2"></i>Keranjang Belanja
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="emptyCart" class="text-center" style="display: none">
+              <i class="fas fa-shopping-bag fa-4x text-muted mb-3"></i>
+              <h5>Keranjang Anda Kosong</h5>
+              <p class="text-muted">Silakan tambahkan produk ke keranjang</p>
+              <a href="products.html" class="btn btn-primary mt-3"
+                >Belanja Sekarang</a
+              >
+            </div>
+            <div id="cartItems">
+              <!-- Cart items will be dynamically added here -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div
+              class="w-100 d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <strong>Total:</strong>
+                <span id="cartTotal" class="text-primary ms-2">Rp 0</span>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  class="btn btn-outline-secondary me-2"
+                  data-bs-dismiss="modal"
+                >
+                  Lanjutkan Belanja
+                </button>
+                <button id="checkoutBtn" class="btn btn-primary">
+                  Checkout
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-store me-2"></i>Mail Store
+            </h5>
+            <p class="text-muted">
+              Platform e-commerce modern yang menghadirkan pengalaman berbelanja
+              terbaik dengan produk berkualitas dan layanan prima.
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <h6 class="fw-bold mb-3">Menu</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-muted text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-muted text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-muted text-decoration-none"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-muted text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Kontak</h6>
+            <ul class="list-unstyled text-muted">
+              <li>
+                <i class="fas fa-envelope me-2"></i
+                ><a
+                  href="/cdn-cgi/l/email-protection"
+                  class="__cf_email__"
+                  data-cfemail="630a0d050c230702110810170c11064d000c0e"
+                  >Whatsappmasis@gmail.com</a
+                >
+              </li>
+              <li><i class="fas fa-phone me-2"></i>+62 123 456 789</li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>Jakarta, Indonesia
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Follow Us</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center text-muted">
+          <p>&copy; 2024 Mail Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

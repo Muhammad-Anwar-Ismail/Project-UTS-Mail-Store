@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
+      type="image/png"
+    />
+    <title>Contact - Mail Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fas fa-store me-2"></i>Mail Store
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge bg-primary" id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="fas fa-user"></i> Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero py-5 mt-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h1 class="display-4 fw-bold mb-3">Hubungi Kami</h1>
+          <p class="lead">
+            Kami siap membantu Anda dengan pertanyaan, saran, atau keluhan
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-info py-5 bg-dark-subtle">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon mb-3">
+                <i class="fas fa-map-marker-alt fa-3x text-primary"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Alamat Kantor</h5>
+              <p class="text-muted">
+                Jl. Sudirman No. 123<br />
+                Jakarta Pusat 10220<br />
+                Indonesia
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon mb-3">
+                <i class="fas fa-phone fa-3x text-success"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Telepon</h5>
+              <p class="text-muted">
+                <strong>Customer Service:</strong><br />
+                +62 21 1234 5678<br />
+                <strong>WhatsApp:</strong><br />
+                +62 812 3456 7890
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="contact-card text-center p-4 h-100">
+              <div class="contact-icon mb-3">
+                <i class="fas fa-envelope fa-3x text-info"></i>
+              </div>
+              <h5 class="fw-bold mb-3">Email</h5>
+              <p class="text-muted">
+                <strong>General:</strong><br />
+                <a
+                  href="/cdn-cgi/l/email-protection"
+                  class="__cf_email__"
+                  data-cfemail="620b0c040d220603100911160d10074c010d0f"
+                  >Whatsappmasis@gmail.com</a
+                ><br />
+                <strong>Support:</strong><br />
+                <a
+                  href="/cdn-cgi/l/email-protection"
+                  class="__cf_email__"
+                  data-cfemail="c9babcb9b9a6bbbd89ada8bba2babda6bbace7aaa6a4"
+                  >Whatsappmasis@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="form-container p-5 bg-dark rounded-4 shadow-lg">
+              <div class="text-center mb-4">
+                <h3 class="fw-bold mb-3">Kirim Pesan</h3>
+                <p class="text-muted">
+                  Isi form di bawah ini dan kami akan merespons dalam 24 jam
+                </p>
+              </div>
+
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="firstName" class="form-label"
+                      >Nama Depan *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="firstName"
+                      required
+                    />
+                    <div class="invalid-feedback">Nama depan wajib diisi.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="lastName" class="form-label"
+                      >Nama Belakang *</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Nama belakang wajib diisi.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Email *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Email yang valid wajib diisi.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="phone" class="form-label">Nomor Telepon</label>
+                    <input type="tel" class="form-control" id="phone" />
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Subjek *</label>
+                    <select class="form-select" id="subject" required>
+                      <option value="">Pilih subjek...</option>
+                      <option value="general">Pertanyaan Umum</option>
+                      <option value="product">Pertanyaan Produk</option>
+                      <option value="order">Status Pesanan</option>
+                      <option value="return">Return & Refund</option>
+                      <option value="technical">Masalah Teknis</option>
+                      <option value="partnership">Kerjasama</option>
+                      <option value="other">Lainnya</option>
+                    </select>
+                    <div class="invalid-feedback">Pilih subjek pesan.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Pesan *</label>
+                    <textarea
+                      class="form-control"
+                      id="message"
+                      rows="6"
+                      placeholder="Tulis pesan Anda di sini..."
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">Pesan wajib diisi.</div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="newsletter"
+                      />
+                      <label class="form-check-label" for="newsletter">
+                        Saya ingin menerima newsletter dan update produk terbaru
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Kirim Pesan
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Success Message -->
+              <div class="alert alert-success d-none" id="successMessage">
+                <i class="fas fa-check-circle me-2"></i>
+                Pesan Anda berhasil dikirim! Kami akan merespons dalam 24 jam.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5 bg-dark-subtle">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h3 class="fw-bold mb-3">Pertanyaan yang Sering Diajukan</h3>
+          <p class="lead">Temukan jawaban untuk pertanyaan umum</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq1"
+                  >
+                    Bagaimana cara melacak pesanan saya?
+                  </button>
+                </h2>
+                <div
+                  id="faq1"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Anda dapat melacak pesanan melalui email konfirmasi yang
+                    dikirim setelah pembelian, atau login ke akun Anda dan cek
+                    di menu "Pesanan Saya". Nomor resi akan diberikan setelah
+                    barang dikirim.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq2"
+                  >
+                    Berapa lama proses pengiriman?
+                  </button>
+                </h2>
+                <div
+                  id="faq2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Pengiriman reguler membutuhkan 3-5 hari kerja, sedangkan
+                    pengiriman express 1-2 hari kerja. Untuk area terpencil
+                    mungkin membutuhkan waktu tambahan 1-2 hari.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq3"
+                  >
+                    Bagaimana kebijakan return produk?
+                  </button>
+                </h2>
+                <div
+                  id="faq3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Kami menerima return dalam 30 hari setelah pembelian dengan
+                    kondisi produk masih baru dan kemasan lengkap. Biaya return
+                    ditanggung pembeli kecuali untuk produk cacat atau salah
+                    kirim.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq4"
+                  >
+                    Metode pembayaran apa saja yang diterima?
+                  </button>
+                </h2>
+                <div
+                  id="faq4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Kami menerima pembayaran melalui transfer bank, kartu
+                    kredit/debit, e-wallet (GoPay, OVO, DANA), dan cicilan 0%
+                    untuk pembelian tertentu.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#faq5"
+                  >
+                    Apakah ada garansi untuk produk?
+                  </button>
+                </h2>
+                <div
+                  id="faq5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#faqAccordion"
+                >
+                  <div class="accordion-body">
+                    Semua produk elektronik memiliki garansi resmi dari
+                    distributor. Garansi bervariasi dari 1-3 tahun tergantung
+                    jenis produk. Detail garansi tercantum di halaman produk
+                    masing-masing.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business Hours -->
+    <section class="business-hours py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="hours-card text-center p-4 bg-dark rounded-4">
+              <h4 class="fw-bold mb-4">Jam Operasional</h4>
+              <div class="row g-3">
+                <div class="col-6">
+                  <div class="day-hours">
+                    <h6 class="fw-bold">Customer Service</h6>
+                    <p class="text-muted mb-0">Senin - Jumat: 08:00 - 17:00</p>
+                    <p class="text-muted">Sabtu: 08:00 - 15:00</p>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="day-hours">
+                    <h6 class="fw-bold">WhatsApp Support</h6>
+                    <p class="text-muted mb-0">Senin - Sabtu: 08:00 - 20:00</p>
+                    <p class="text-muted">Minggu: 10:00 - 16:00</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-3">
+                <small class="text-muted">*Waktu Indonesia Barat (WIB)</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-store me-2"></i>Mail Store
+            </h5>
+            <p class="text-muted">
+              Platform e-commerce modern yang menghadirkan pengalaman berbelanja
+              terbaik dengan produk berkualitas dan layanan prima.
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <h6 class="fw-bold mb-3">Menu</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-muted text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-muted text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-muted text-decoration-none"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-muted text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Kontak</h6>
+            <ul class="list-unstyled text-muted">
+              <li>
+                <i class="fas fa-envelope me-2"></i
+                ><a
+                  href="/cdn-cgi/l/email-protection"
+                  class="__cf_email__"
+                  data-cfemail="7f161119103f1b1e0d140c0b100d1a511c1012"
+                  >Whatsappmasis@gmail.com</a
+                >
+              </li>
+              <li><i class="fas fa-phone me-2"></i>+62 123 456 789</li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>Jakarta, Indonesia
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Follow Us</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center text-muted">
+          <p>&copy; 2024 Mail Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

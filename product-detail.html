@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://public-frontend-cos.metadl.com/mgx/img/favicon.png"
+      type="image/png"
+    />
+    <title>Product Detail - Mail Store</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="fas fa-store me-2"></i>Mail Store
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="badge bg-primary" id="cartCount">0</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">
+                <i class="fas fa-user"></i> Login
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section py-3 mt-5 bg-dark-subtle">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="text-decoration-none">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="products.html" class="text-decoration-none">Products</a>
+            </li>
+            <li
+              class="breadcrumb-item active"
+              aria-current="page"
+              id="productBreadcrumb"
+            >
+              Detail Produk
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail py-5">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Product Images -->
+          <div class="col-lg-6">
+            <div class="product-images">
+              <div class="main-image mb-3">
+                <img
+                  id="mainProductImage"
+                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop&crop=center"
+                  alt="Product"
+                  class="img-fluid rounded-3 shadow-lg w-100"
+                />
+              </div>
+              <div class="thumbnail-images">
+                <div class="row g-2">
+                  <div class="col-3">
+                    <img
+                      src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=150&h=150&fit=crop&crop=center"
+                      alt="Thumbnail 1"
+                      class="img-fluid rounded-2 thumbnail-img active"
+                      data-main="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop&crop=center"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=150&h=150&fit=crop&crop=center"
+                      alt="Thumbnail 2"
+                      class="img-fluid rounded-2 thumbnail-img"
+                      data-main="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&h=600&fit=crop&crop=center"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=150&h=150&fit=crop&crop=center"
+                      alt="Thumbnail 3"
+                      class="img-fluid rounded-2 thumbnail-img"
+                      data-main="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=600&fit=crop&crop=center"
+                    />
+                  </div>
+                  <div class="col-3">
+                    <img
+                      src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=150&h=150&fit=crop&crop=center"
+                      alt="Thumbnail 4"
+                      class="img-fluid rounded-2 thumbnail-img"
+                      data-main="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop&crop=center"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Info -->
+          <div class="col-lg-6">
+            <div class="product-info">
+              <div class="product-category mb-2">
+                <span class="badge bg-primary" id="productCategory"
+                  >Elektronik</span
+                >
+              </div>
+              <h1
+                class="product-title display-5 fw-bold mb-3"
+                id="productTitle"
+              >
+                Headphone Wireless Premium
+              </h1>
+
+              <!-- Rating -->
+              <div class="product-rating mb-3">
+                <div class="d-flex align-items-center">
+                  <div class="stars me-2" id="productStars">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </div>
+                  <span class="rating-text text-muted">
+                    <span id="productRating">4.8</span> (124 ulasan)
+                  </span>
+                </div>
+              </div>
+
+              <!-- Price -->
+              <div class="product-price mb-4">
+                <div class="d-flex align-items-center gap-3">
+                  <span
+                    class="current-price h2 fw-bold text-primary mb-0"
+                    id="productPrice"
+                  >
+                    Rp 1.299.000
+                  </span>
+                  <span
+                    class="original-price h5 text-muted text-decoration-line-through mb-0"
+                    id="productOriginalPrice"
+                  >
+                    Rp 1.599.000
+                  </span>
+                  <span class="discount-badge badge bg-success">19% OFF</span>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <div class="product-description mb-4">
+                <h5 class="fw-bold mb-3">Deskripsi Produk</h5>
+                <p class="text-muted" id="productDescription">
+                  Headphone wireless premium dengan kualitas suara Hi-Fi dan
+                  teknologi noise cancelling terdepan. Dilengkapi dengan baterai
+                  tahan lama hingga 30 jam dan desain ergonomis yang nyaman
+                  untuk penggunaan jangka panjang. Cocok untuk profesional,
+                  gamer, dan pecinta musik.
+                </p>
+              </div>
+
+              <!-- Features -->
+              <div class="product-features mb-4">
+                <h6 class="fw-bold mb-3">Fitur Utama:</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-2">
+                    <i class="fas fa-check text-success me-2"></i>Teknologi
+                    Noise Cancelling
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check text-success me-2"></i>Baterai 30 jam
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check text-success me-2"></i>Bluetooth 5.0
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check text-success me-2"></i>Quick Charge
+                    15 menit = 3 jam
+                  </li>
+                  <li class="mb-2">
+                    <i class="fas fa-check text-success me-2"></i>Garansi resmi
+                    2 tahun
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Quantity and Actions -->
+              <div class="product-actions">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <label class="form-label fw-bold">Jumlah:</label>
+                    <div class="quantity-selector">
+                      <div class="input-group">
+                        <button
+                          class="btn btn-outline-secondary"
+                          type="button"
+                          id="decreaseQty"
+                        >
+                          <i class="fas fa-minus"></i>
+                        </button>
+                        <input
+                          type="number"
+                          class="form-control text-center"
+                          value="1"
+                          min="1"
+                          max="10"
+                          id="quantity"
+                        />
+                        <button
+                          class="btn btn-outline-secondary"
+                          type="button"
+                          id="increaseQty"
+                        >
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="form-label fw-bold"
+                      >Stok:
+                      <span class="text-success">15 tersedia</span></label
+                    >
+                    <div class="d-flex gap-2 mt-4">
+                      <button
+                        id="addToCartBtn"
+                        class="btn btn-primary flex-grow-1"
+                        data-product-id="1"
+                      >
+                        <i class="fas fa-cart-plus me-2"></i>Tambah ke Keranjang
+                      </button>
+                      <button
+                        id="buyNowBtn"
+                        class="btn btn-success flex-grow-1"
+                        data-product-id="1"
+                      >
+                        <i class="fas fa-bolt me-2"></i>Beli Sekarang
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Additional Actions -->
+                <div class="additional-actions mt-3">
+                  <div class="d-flex gap-2">
+                    <button class="btn btn-outline-light" id="wishlistBtn">
+                      <i class="fas fa-heart me-2"></i>Wishlist
+                    </button>
+                    <button class="btn btn-outline-light" id="shareBtn">
+                      <i class="fas fa-share-alt me-2"></i>Share
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs py-5 bg-dark-subtle">
+      <div class="container">
+        <ul class="nav nav-tabs nav-fill mb-4" id="productTabs" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="specs-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#specs"
+              type="button"
+            >
+              Spesifikasi
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="reviews-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reviews"
+              type="button"
+            >
+              Ulasan (124)
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="shipping-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#shipping"
+              type="button"
+            >
+              Pengiriman
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="productTabContent">
+          <!-- Specifications -->
+          <div class="tab-pane fade show active" id="specs" role="tabpanel">
+            <div class="row">
+              <div class="col-lg-8">
+                <table class="table table-dark table-striped">
+                  <tbody>
+                    <tr>
+                      <td class="fw-bold">Brand</td>
+                      <td>AudioTech Pro</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Model</td>
+                      <td>AT-WH1000XM5</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Tipe</td>
+                      <td>Over-ear Wireless</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Driver</td>
+                      <td>40mm Dynamic</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Frequency Response</td>
+                      <td>4Hz - 40kHz</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Impedance</td>
+                      <td>16 Ohm</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Bluetooth</td>
+                      <td>5.0 dengan aptX HD</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Baterai</td>
+                      <td>30 jam (ANC on), 38 jam (ANC off)</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Charging</td>
+                      <td>USB-C, Quick Charge</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Berat</td>
+                      <td>254g</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews -->
+          <div class="tab-pane fade" id="reviews" role="tabpanel">
+            <div class="reviews-section">
+              <div class="row mb-4">
+                <div class="col-lg-4">
+                  <div class="rating-summary text-center p-4 bg-dark rounded-3">
+                    <h2 class="display-4 fw-bold text-warning">4.8</h2>
+                    <div class="stars mb-2">
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                      <i class="fas fa-star text-warning"></i>
+                    </div>
+                    <p class="text-muted">Berdasarkan 124 ulasan</p>
+                  </div>
+                </div>
+                <div class="col-lg-8">
+                  <div class="rating-breakdown">
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="me-2">5★</span>
+                      <div class="progress flex-grow-1 me-2">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 75%"
+                        ></div>
+                      </div>
+                      <span class="text-muted">93</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="me-2">4★</span>
+                      <div class="progress flex-grow-1 me-2">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 15%"
+                        ></div>
+                      </div>
+                      <span class="text-muted">19</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="me-2">3★</span>
+                      <div class="progress flex-grow-1 me-2">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 8%"
+                        ></div>
+                      </div>
+                      <span class="text-muted">10</span>
+                    </div>
+                    <div class="d-flex align-items-center mb-2">
+                      <span class="me-2">2★</span>
+                      <div class="progress flex-grow-1 me-2">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 2%"
+                        ></div>
+                      </div>
+                      <span class="text-muted">2</span>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <span class="me-2">1★</span>
+                      <div class="progress flex-grow-1 me-2">
+                        <div
+                          class="progress-bar bg-warning"
+                          style="width: 0%"
+                        ></div>
+                      </div>
+                      <span class="text-muted">0</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Individual Reviews -->
+              <div class="reviews-list">
+                <div class="review-item border-bottom pb-4 mb-4">
+                  <div class="d-flex align-items-start">
+                    <div class="reviewer-avatar me-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face"
+                        alt="Reviewer"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+                    <div class="review-content flex-grow-1">
+                      <div
+                        class="d-flex justify-content-between align-items-start mb-2"
+                      >
+                        <div>
+                          <h6 class="fw-bold mb-1">Ahmad Rizki</h6>
+                          <div class="stars">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                        </div>
+                        <small class="text-muted">2 hari yang lalu</small>
+                      </div>
+                      <p class="text-muted mb-2">
+                        Kualitas suara luar biasa! Noise cancelling bekerja
+                        dengan sangat baik. Baterai awet dan nyaman dipakai
+                        seharian. Highly recommended!
+                      </p>
+                      <div class="review-helpful">
+                        <button class="btn btn-sm btn-outline-light me-2">
+                          <i class="fas fa-thumbs-up me-1"></i>Membantu (12)
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="review-item border-bottom pb-4 mb-4">
+                  <div class="d-flex align-items-start">
+                    <div class="reviewer-avatar me-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face"
+                        alt="Reviewer"
+                        class="rounded-circle"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+                    <div class="review-content flex-grow-1">
+                      <div
+                        class="d-flex justify-content-between align-items-start mb-2"
+                      >
+                        <div>
+                          <h6 class="fw-bold mb-1">Sari Dewi</h6>
+                          <div class="stars">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-muted"></i>
+                          </div>
+                        </div>
+                        <small class="text-muted">1 minggu yang lalu</small>
+                      </div>
+                      <p class="text-muted mb-2">
+                        Produk bagus untuk harga segini. Build quality solid dan
+                        fitur-fiturnya lengkap. Cuma agak berat untuk penggunaan
+                        lama.
+                      </p>
+                      <div class="review-helpful">
+                        <button class="btn btn-sm btn-outline-light me-2">
+                          <i class="fas fa-thumbs-up me-1"></i>Membantu (8)
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button class="btn btn-outline-primary">
+                  Lihat Semua Ulasan
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipping -->
+          <div class="tab-pane fade" id="shipping" role="tabpanel">
+            <div class="shipping-info">
+              <div class="row g-4">
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Informasi Pengiriman</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-3">
+                      <div class="d-flex align-items-start">
+                        <i class="fas fa-truck text-primary me-3 mt-1"></i>
+                        <div>
+                          <h6 class="fw-bold">Pengiriman Reguler</h6>
+                          <p class="text-muted mb-0">
+                            3-5 hari kerja - Gratis untuk pembelian > Rp 500.000
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="d-flex align-items-start">
+                        <i
+                          class="fas fa-shipping-fast text-success me-3 mt-1"
+                        ></i>
+                        <div>
+                          <h6 class="fw-bold">Pengiriman Express</h6>
+                          <p class="text-muted mb-0">
+                            1-2 hari kerja - Rp 25.000
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mb-3">
+                      <div class="d-flex align-items-start">
+                        <i class="fas fa-store text-warning me-3 mt-1"></i>
+                        <div>
+                          <h6 class="fw-bold">Pickup di Store</h6>
+                          <p class="text-muted mb-0">
+                            Tersedia di Jakarta, Bandung, Surabaya - Gratis
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-lg-6">
+                  <h5 class="fw-bold mb-3">Kebijakan Return</h5>
+                  <ul class="list-unstyled">
+                    <li class="mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      Return dalam 30 hari
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      Kondisi produk masih baru
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      Kemasan dan aksesoris lengkap
+                    </li>
+                    <li class="mb-2">
+                      <i class="fas fa-check text-success me-2"></i>
+                      Biaya return ditanggung pembeli
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products py-5">
+      <div class="container">
+        <h3 class="fw-bold mb-4">Produk Terkait</h3>
+        <div class="row g-4" id="relatedProducts">
+          <!-- Related products will be loaded by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-store me-2"></i>Mail Store
+            </h5>
+            <p class="text-muted">
+              Platform e-commerce modern yang menghadirkan pengalaman berbelanja
+              terbaik dengan produk berkualitas dan layanan prima.
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <h6 class="fw-bold mb-3">Menu</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-muted text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-muted text-decoration-none"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="products.html" class="text-muted text-decoration-none"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-muted text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Kontak</h6>
+            <ul class="list-unstyled text-muted">
+              <li>
+                <i class="fas fa-envelope me-2"></i
+                ><a
+                  href="/cdn-cgi/l/email-protection"
+                  class="__cf_email__"
+                  data-cfemail="036a6d656c436762716870776c71662d606c6e"
+                  >Whatsappmasis@gmail.com</a
+                >
+              </li>
+              <li><i class="fas fa-phone me-2"></i>+62 123 456 789</li>
+              <li>
+                <i class="fas fa-map-marker-alt me-2"></i>Jakarta, Indonesia
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3">
+            <h6 class="fw-bold mb-3">Follow Us</h6>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="btn btn-outline-light btn-sm">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center text-muted">
+          <p>&copy; 2024 Mail Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
