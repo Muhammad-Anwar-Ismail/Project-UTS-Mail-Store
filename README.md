@@ -1,4 +1,4 @@
-# 💌 Mail Store — Website E-Commerce Sederhana
+# Mail Store — Website E-Commerce Sederhana
 
 **Mail Store** adalah proyek individu yang dikembangkan untuk memenuhi tugas *Project Mandiri* pada mata kuliah **Pemrograman Berbasis Platform**.  
 Website ini dirancang sebagai simulasi toko online sederhana dengan tampilan modern, fitur interaktif, dan desain yang responsif.
@@ -15,12 +15,12 @@ Proyek ini menampilkan kemampuan dalam:
 
 Website terdiri dari beberapa halaman utama yang menggambarkan alur toko online sederhana:
 
-1. 🏠 **index.html** — Halaman utama dengan navigasi dan tampilan produk unggulan.  
-2. 🧍‍♂️ **about.html** — Halaman profil dan informasi tentang Mail Store.  
-3. 🛍️ **products.html** — Daftar seluruh produk yang tersedia.  
-4. 📦 **product-detail.html** — Halaman detail tiap produk, berisi gambar dan deskripsi.  
-5. ✉️ **contact.html** — Form kontak untuk komunikasi pelanggan.  
-6. 🔐 **login.html** — Halaman login dan registrasi pengguna.
+1. **index.html** — Halaman utama dengan navigasi dan tampilan produk unggulan.  
+2. **about.html** — Halaman profil dan informasi tentang Mail Store.  
+3. **products.html** — Daftar seluruh produk yang tersedia.  
+4. **product-detail.html** — Halaman detail tiap produk, berisi gambar dan deskripsi.  
+5. **contact.html** — Form kontak untuk komunikasi pelanggan.  
+6. **login.html** — Halaman login dan registrasi pengguna.
 
 ## Desain dan Teknologi
 
@@ -62,39 +62,39 @@ Sebagai bagian dari tugas Project Mandiri, dokumentasi meliputi:
 - **Video Presentasi (15 menit)**  
   Format judul:  TIE_Muhammad Anwar Ismail_24051204161 — Website E-Commerce Mail Store | Project Mandiri PBP 2025/2026 Ganjil
   **TIE_Muhammad Anwar Ismail_24051204161 – Project Mandiri PBP 2025/2026 Ganjil**  
-  👉 [Tautan video akan ditambahkan di sini]
+  [Tautan video akan ditambahkan di sini]
 
 - **Screenshot Website**  
   Tampilkan cuplikan halaman:
-  Homepage:
+  Halaman Homepage:
   ![Homepage](assets/img/screenshot-home1.png)
   ![Homepage](assets/img/screenshot-home2.png)
   ![Homepage](assets/img/screenshot-home3.png)
 
-  login:
+  Halaman login:
   ![Login](assets/img/screenshot-login.png)
   ![Login](assets/img/screenshot-register.png)
 
-  produk:
+  Halaman produk:
   ![Produk](assets/img/screenshot-product1.png)
   ![Produk](assets/img/screenshot-product2.png)
 
-  kontak:
+  Halaman kontak:
   ![Kontak](assets/img/screenshot-kontak1.png)
   ![Kontak](assets/img/screenshot-kontak2.png)
   ![Kontak](assets/img/screenshot-kontak3.png)
   ![Kontak](assets/img/screenshot-kontak4.png)
     
-  About:
+  Halaman About:
   ![About](assets/img/screenshot-about1.png)
   ![About](assets/img/screenshot-about2.png)
 
-  Produk Detail:
+  Halaman Produk Detail:
   ![Produk Detail](assets/img/screenshot-produk-detail1.png)
   ![Produk Detail](assets/img/screenshot-produk-detail2.png)
   ![Produk Detail](assets/img/screenshot-produk-detail3.png)
 
-  Checkout:
+  Halaman Checkout:
   ![Checkout](assets/img/checkout1.png)
   ![Checkout](assets/img/checkout2.png)
   ![Checkout](assets/img/checkout3.png)
@@ -104,7 +104,7 @@ Sebagai bagian dari tugas Project Mandiri, dokumentasi meliputi:
 
 ## Pengembang
 
-Proyek ini dikembangkan oleh **Whatsapp Masis**, sebagai bentuk penerapan praktis konsep *front-end web development* dalam konteks akademik.  
+Proyek ini dikembangkan oleh **Muhammad Anwar Ismail**, sebagai bentuk penerapan praktis konsep *front-end web development* dalam konteks akademik.  
 Mail Store menjadi refleksi pembelajaran nyata dalam menggabungkan estetika desain dan logika pemrograman web modern.
 
 ### Status Proyek
