@@ -63,10 +63,14 @@ Sebagai bagian dari tugas Project Mandiri, dokumentasi meliputi:
   Halaman login:
   ![Login](assets/img/screenshot-login.png)
   ![Login](assets/img/screenshot-register.png)
+  ![Login](assets/img/screenshot-forgotpassword.png)
 
   Halaman produk:
   ![Produk](assets/img/screenshot-product1.png)
   ![Produk](assets/img/screenshot-product2.png)
+  ![Produk](assets/img/screenshot-product3.png)
+  ![Produk](assets/img/screenshot-product4.png)
+  ![Produk](assets/img/screenshot-product5.png)
 
   Halaman kontak:
   ![Kontak](assets/img/screenshot-kontak1.png)
