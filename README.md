@@ -28,8 +28,8 @@ Website terdiri dari beberapa halaman utama yang menggambarkan alur toko online 
 Website ini dikembangkan menggunakan teknologi front-end modern berikut:
 
 - **HTML5** : Struktur konten yang semantik dan mudah dipahami.  
-- **CSS3 + Bootstrap 5** : Mengatur tampilan dengan tema gelap (dark mode) yang elegan.  
-- **JavaScript (ES6+)** : Menangani interaktivitas, validasi, dan efek dinamis.  
+- **CSS + Bootstrap 5** : Mengatur tampilan dengan tema gelap (dark mode) yang elegan.  
+- **JavaScript** : Menangani interaktivitas, validasi, dan efek dinamis.  
 - **Responsive Design** : Layout menyesuaikan layar pengguna (mobile-friendly).
 
 ## Fitur Utama
@@ -51,7 +51,7 @@ Sebagai bagian dari tugas Project Mandiri, dokumentasi meliputi:
 - **Video Presentasi (15 menit)**  
   Format judul:  TIE_Muhammad Anwar Ismail_24051204161 — Website E-Commerce Mail Store | Project Mandiri PBP 2025/2026 Ganjil
   **TIE_Muhammad Anwar Ismail_24051204161 – Project Mandiri PBP 2025/2026 Ganjil**  
-  [Tautan video akan ditambahkan di sini]
+  https://www.youtube.com/watch?v=iXBq-t2zA4E
 
 - **Screenshot Website**  
   Tampilkan cuplikan halaman:
