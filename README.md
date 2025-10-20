@@ -15,22 +15,22 @@ Proyek ini menampilkan kemampuan dalam:
 
 Website terdiri dari beberapa halaman utama yang menggambarkan alur toko online sederhana:
 
-1. **index.html** — Halaman utama dengan navigasi dan tampilan produk unggulan.  
-2. **about.html** — Halaman profil dan informasi tentang Mail Store.  
-3. **products.html** — Daftar seluruh produk yang tersedia.  
-4. **product-detail.html** — Halaman detail tiap produk, berisi gambar dan deskripsi.  
-5. **contact.html** — Form kontak untuk komunikasi pelanggan.  
-6. **login.html** — Halaman login dan registrasi pengguna.
-7. **checkout.html** — Halaman checkout pengguna.
+1. **index.html** : Halaman utama dengan navigasi dan tampilan produk unggulan.  
+2. **about.html** : Halaman profil dan informasi tentang Mail Store.  
+3. **products.html** : Daftar seluruh produk yang tersedia.  
+4. **product-detail.html** : Halaman detail tiap produk, berisi gambar dan deskripsi.  
+5. **contact.html** : Form kontak untuk komunikasi pelanggan.  
+6. **login.html** : Halaman login dan registrasi pengguna.
+7. **checkout.html** : Halaman checkout pengguna.
 
 ## Desain dan Teknologi
 
 Website ini dikembangkan menggunakan teknologi front-end modern berikut:
 
-- **HTML5** → Struktur konten yang semantik dan mudah dipahami.  
-- **CSS3 + Bootstrap 5** → Mengatur tampilan dengan tema gelap (dark mode) yang elegan.  
-- **JavaScript (ES6+)** → Menangani interaktivitas, validasi, dan efek dinamis.  
-- **Responsive Design** → Layout menyesuaikan layar pengguna (mobile-friendly).
+- **HTML5** : Struktur konten yang semantik dan mudah dipahami.  
+- **CSS3 + Bootstrap 5** : Mengatur tampilan dengan tema gelap (dark mode) yang elegan.  
+- **JavaScript (ES6+)** : Menangani interaktivitas, validasi, dan efek dinamis.  
+- **Responsive Design** : Layout menyesuaikan layar pengguna (mobile-friendly).
 
 ## Fitur Utama
 
